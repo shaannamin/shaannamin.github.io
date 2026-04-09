@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaan N. Amin — Writer</title>
+  <meta name="description" content="Essays and journalism by Shaan N. Amin, published in The Atlantic, The New Republic, The Caravan, The Georgia Review, and more." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shaan N. Amin — Writer" />
+  <meta property="og:description" content="Writing about power and identity throughout Asia and its diasporas, from the alt-right's fascination with manga to Indonesian LGBTQ politics." />
+  <meta property="og:url" content="https://shaannamin.github.io" />
+  <!-- Replace the og:image below with an absolute URL to a photo or header image once you have one -->
+ <meta property="og:image" content="https://shaannamin.github.io/photo.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23F6F1E8'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='600' fill='%2376152B'>SA</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #F6F1E8;
+      --ink: #16130C;
+      --ink-mid: #3D3828;
+      --ink-light: #7A7362;
+      --wine: #76152B;
+      --wine-light: #A8364E;
+      --rule: #D4CABC;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --body: 'Lora', Georgia, serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 18px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 4rem;
+      border-bottom: 0.5px solid var(--rule);
+      position: sticky;
+      top: 0;
+      background: var(--cream);
+      z-index: 100;
+    }
+
+    .nav-name {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--body);
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--wine); }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 7rem 4rem 5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+    }
+
+    .hero-left {
+      align-self: stretch;
+    }
+
+    .hero-photo {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-photo-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      background: var(--rule);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      color: var(--ink-light);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+    }
+
+    .hero-photo-placeholder span { font-size: 2rem; opacity: 0.4; }
+
+    .hero-right {
+      padding-bottom: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .hero-name-small {
+      font-family: var(--body);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--wine);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .hero-tagline {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.55;
+      color: var(--ink-mid);
+      border-left: 2px solid var(--wine);
+      padding-left: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-desc {
+      font-size: 0.92rem;
+      color: var(--ink-light);
+      line-height: 1.8;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 4rem;
+    }
+
+    .divider hr {
+      border: none;
+      border-top: 0.5px solid var(--rule);
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 4rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-label {
+      font-family: var(--body);
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--wine);
+      white-space: nowrap;
+    }
+
+    .section-rule {
+      flex: 1;
+      border: none;
+      border-top: 0.5px solid var(--rule);
+    }
+
+    /* ── WRITING / PUBLICATIONS ── */
+    .writing-grid {
+      display: grid;
+      gap: 0;
+    }
+
+    .piece {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: baseline;
+      padding: 1.5rem 0;
+      border-bottom: 0.5px solid var(--rule);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s;
+    }
+
+    .piece:first-child { border-top: 0.5px solid var(--rule); }
+
+    .piece:hover .piece-title { color: var(--wine); }
+
+    .piece-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .piece-publication {
+      font-family: var(--body);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--wine-light);
+    }
+
+    .piece-title {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--ink);
+      transition: color 0.2s;
+    }
+
+    .piece-teaser {
+      font-size: 0.92rem;
+      color: var(--ink-mid);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .piece-type {
+      font-size: 0.75rem;
+      color: var(--ink-light);
+      font-style: italic;
+      letter-spacing: 0.03em;
+    }
+
+    .piece-arrow {
+      font-size: 1.1rem;
+      color: var(--rule);
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .piece:hover .piece-arrow {
+      color: var(--wine);
+      transform: translateX(3px);
+    }
+
+    /* ── VENUES BAR ── */
+    .divider-venues {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.75rem 4rem;
+      border-top: 0.5px solid var(--rule);
+      border-bottom: 0.5px solid var(--rule);
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .venues-inline {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem 0;
+    }
+
+    .venues-inline li {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink-mid);
+    }
+
+    .venues-inline li::after { content: '\00a0·\00a0'; color: var(--rule); }
+    .venues-inline li:last-child::after { content: ''; }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .about-photo-placeholder {
+      aspect-ratio: 3/4;
+      background: var(--rule);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      color: var(--ink-light);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+    }
+
+    .about-photo-placeholder span { font-size: 2rem; opacity: 0.4; }
+
+    .about-text {
+      max-width: 680px;
+    }
+
+    .about-text p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--ink-mid);
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text p:last-child { margin-bottom: 0; }
+
+    .about-venues {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 0.5px solid var(--rule);
+    }
+
+    .about-venues p {
+      font-family: var(--body);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 0.75rem !important;
+    }
+
+    .about-venues ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+    }
+
+    .about-venues ul li {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink-mid);
+    }
+
+    .about-venues ul li::after { content: ' ·'; color: var(--rule); }
+    .about-venues ul li:last-child::after { content: ''; }
+
+    /* ── CONTACT ── */
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-copy {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--ink-mid);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      padding-top: 0.5rem;
+    }
+
+    .contact-link {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+      text-decoration: none;
+    }
+
+    .contact-link-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+
+    .contact-link-value {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      color: var(--ink);
+      transition: color 0.2s;
+      border-bottom: 0.5px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .contact-link:hover .contact-link-value {
+      color: var(--wine);
+      border-color: var(--wine);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 0.5px solid var(--rule);
+      padding: 2.5rem 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer p {
+      font-size: 0.75rem;
+      color: var(--ink-light);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1.5rem 1.5rem; }
+      .nav-links { gap: 1.5rem; }
+      .nav-links a { font-size: 0.7rem; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 4rem 1.5rem 3rem;
+        gap: 2.5rem;
+      }
+
+      section { padding: 3.5rem 1.5rem; }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .about-photo-placeholder {
+        aspect-ratio: 4/3;
+        max-width: 280px;
+      }
+
+      .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+
+      .divider { padding: 0 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-name">Shaan N. Amin</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-left">
+      <!-- Replace with: <img class="hero-photo" src="photo.jpg" alt="Shaan N. Amin" /> -->
+<img class="hero-photo" src="photo.jpg" alt="Shaan N. Amin" />
+    </div>
+    <div class="hero-right">
+      <h1 class="hero-name-small">Shaan N. Amin &nbsp;·&nbsp; Essays &amp; Journalism</h1>
+      <p class="hero-tagline">
+        Writing about power and identity throughout Asia and its diasporas, from the alt-right's fascination with manga to Indonesian LGBTQ politics.
+      </p>
+      <p class="hero-desc">Based in Washington, DC &nbsp;·&nbsp; Available for assignments and commissions</p>
+    </div>
+  </div>
+
+  <div class="divider-venues">
+    <span class="section-label">His work appears in</span>
+    <ul class="venues-inline">
+      <li>The Atlantic</li>
+      <li>The New Republic</li>
+      <li>The Caravan</li>
+      <li>The Georgia Review</li>
+      <li>The Rumpus</li>
+      <li>Washington Square Review</li>
+      <li>New Mandala</li>
+      <li>Partially Examined Life</li>
+    </ul>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-header">
+      <span class="section-label">About</span>
+      <hr class="section-rule" />
+    </div>
+
+    <div class="about-text">
+        <p>
+          Shaan Amin is an Indian American essayist, journalist, critic, and researcher from Syracuse and Elmira, New York. He received his MA and PhD in political science from the University of Wisconsin-Madison, where he received a National Science Foundation Graduate Research Fellowship for outstanding research and a Department Teaching Excellence Award for significant contributions in instruction. He served on the editorial board at <em>The Rumpus</em> from 2021-2025. Before this, he received his BA in Mathematics from Williams College.
+<!--- His writing is deeply informed by his Indian American heritage, his Rustbelt upbringing in central and southern New York, his time spent working in Indonesia, and his experiences managing chronic injuries.--->
+        </p>
+
+        <p>
+He is currently working on two book projects. <em>The State of Prejudice</em>, based on his dissertation of the same name, records and analyzes how local governments and local NGOs provide and fail to provide services to Indonesia's most at-risk populations. <em>Homespun</em>, an in-progress creative nonfiction essay collection, unpacks the lived, historical, and mythical experience of injuries and violence blending the tools of historical research, personal anecdote, and myth.
+        </p>
+        
+ <p>
+In his spare time, he works at Bhakti Yoga DC, hosts a weekly open potluck, and is a dedicated member of the vibrant DC salsa and bachata scene.
+        </p>
+      </div>
+  </section>
+
+
+  <!-- WRITING -->
+  <section id="writing">
+    <div class="section-header">
+      <span class="section-label">Selected Writing</span>
+      <hr class="section-rule" />
+    </div>
+
+    <div class="writing-grid">
+
+      <div class="piece">
+        <div class="piece-meta">
+          <span class="piece-publication">The Georgia Review</span>
+          <span class="piece-title">Shaven</span>
+          <span class="piece-teaser">"I resurrect old myths when drawing lines between stars, loose strands of coarse hair clinging to a damp sink."</span>
+          <span class="piece-type">Creative Nonfiction &nbsp;·&nbsp; Forthcoming May 2026</span>
+        </div>
+      </div>
+
+      <a class="piece" href="https://www.newmandala.org/lgbt-organisations-navigate-indonesias-two-homophobias/" target="_blank" rel="noopener">
+        <div class="piece-meta">
+          <span class="piece-publication">New Mandala</span>
+          <span class="piece-title">LGBT Organisations Navigate Indonesia's Two Homophobias</span>
+          <span class="piece-teaser">"Though a single political homophobia suggests that organisations have no choice but to hide or resist, a pair of homophobias presents them with different tradeoffs."</span>
+          <span class="piece-type">Analysis &nbsp;·&nbsp; January 2026</span>
+        </div>
+        <span class="piece-arrow">→</span>
+      </a>
+
+      <a class="piece" href="https://www.washingtonsquarereview.com/nish-patel" target="_blank" rel="noopener">
+        <div class="piece-meta">
+          <span class="piece-publication">Washington Square Review</span>
+          <span class="piece-title">Each Other</span>
+          <span class="piece-teaser">"Horror is less scary if you know when the monster will jump from the shadows."</span>
+          <span class="piece-type">Creative Nonfiction &nbsp;·&nbsp; Winter 2022</span>
+        </div>
+        <span class="piece-arrow">→</span>
+      </a>
+
+      <a class="piece" href="https://therumpus.net/2021/03/23/heat/" target="_blank" rel="noopener">
+        <div class="piece-meta">
+          <span class="piece-publication">The Rumpus</span>
+          <span class="piece-title">Heat</span>
+          <span class="piece-teaser">"I feared this ravening thing in myself, in men."</span>
+          <span class="piece-type">Creative Nonfiction &nbsp;·&nbsp; March 2021</span>
+        </div>
+        <span class="piece-arrow">→</span>
+      </a>
+
+      <a class="piece" href="https://caravanmagazine.in/reportage/shalabh-kumar-trump-modi" target="_blank" rel="noopener">
+        <div class="piece-meta">
+          <span class="piece-publication">The Caravan</span>
+          <span class="piece-title">Money Talks</span>
+          <span class="piece-teaser">"His personal, political and business interests form a web stretching between the two countries."</span>
+          <span class="piece-type">Investigation &nbsp;·&nbsp; February 2021</span>
+        </div>
+        <span class="piece-arrow">→</span>
+      </a>
+
+      <a class="piece" href="https://newrepublic.com/article/160193/attack-titan-alt-rights-favorite-manga" target="_blank" rel="noopener">
+        <div class="piece-meta">
+          <span class="piece-publication">The New Republic</span>
+          <span class="piece-title">Why Attack on Titan Is the Alt-Right's Favorite Manga</span>
+          <span class="piece-teaser">"Isayama’s silence just makes it easier for audiences to transpose their own ideologies onto the world he has created."</span>
+          <span class="piece-type">Media Criticism &nbsp;·&nbsp; November 2020</span>
+        </div>
+        <span class="piece-arrow">→</span>
+      </a>
+
+      <a class="piece" href="https://newrepublic.com/article/154399/can-left-win-youtube" target="_blank" rel="noopener">
+        <div class="piece-meta">
+          <span class="piece-publication">The New Republic</span>
+          <span class="piece-title">Can the Left Win YouTube?</span>
+          <span class="piece-teaser">"Many LeftTubers do not consider themselves part of a united movement, but rather an ad hoc moment."</span>
+          <span class="piece-type">Analysis &nbsp;·&nbsp; July 2019</span>
+        </div>
+        <span class="piece-arrow">→</span>
+      </a>
+
+      <a class="piece" href="https://caravanmagazine.in/politics/nikki-haley-racial-opportunism-rising-political-star-trump-america" target="_blank" rel="noopener">
+        <div class="piece-meta">
+          <span class="piece-publication">The Caravan</span>
+          <span class="piece-title">Race to the Top</span>
+          <span class="piece-teaser">"As Republicans try to embrace minorities at arms’ length, Haley is the ideal evangelist of conservative gospel."</span>
+          <span class="piece-type">Cover Story &nbsp;·&nbsp; July 2018</span>
+        </div>
+        <span class="piece-arrow">→</span>
+      </a>
+
+      <a class="piece" href="https://www.theatlantic.com/entertainment/archive/2018/03/saga-comic-series-image-issue-50/556481/" target="_blank" rel="noopener">
+        <div class="piece-meta">
+          <span class="piece-publication">The Atlantic</span>
+          <span class="piece-title">The Sprawling, Empathetic Adventure of <em>Saga</em></span>
+          <span class="piece-teaser">"Saga stands out as a profane, glorious ode to compassion and equality."</span>
+          <span class="piece-type">Media Criticism &nbsp;·&nbsp; March 2018</span>
+        </div>
+        <span class="piece-arrow">→</span>
+      </a>
+
+      <a class="piece" href="https://www.theatlantic.com/entertainment/archive/2018/02/trump-modi-india-south-asia-accent-apu/551696/" target="_blank" rel="noopener">
+        <div class="piece-meta">
+          <span class="piece-publication">The Atlantic</span>
+          <span class="piece-title">Making Fun of How South Asians Talk: A History</span>
+          <span class="piece-teaser">"Despite South Asian America’s budding pop-cultural renaissance, patanking’s legacy lingers."</span>
+          <span class="piece-type">Analysis &nbsp;·&nbsp; February 2018</span>
+        </div>
+        <span class="piece-arrow">→</span>
+      </a>
+
+      <a class="piece" href="https://www.theatlantic.com/entertainment/archive/2017/12/the-comics-that-redefined-hinduism/539838/" target="_blank" rel="noopener">
+        <div class="piece-meta">
+          <span class="piece-publication">The Atlantic</span>
+          <span class="piece-title">The Dark Side of the Comics That Redefined Hinduism</span>
+          <span class="piece-teaser">"I struggle to reconcile ACK’s recurrent bigoted portrayals with my enduring affection for the characters whose selflessness and courage left me in awe as a child."</span>
+          <span class="piece-type">Media Criticism &nbsp;·&nbsp; December 2017</span>
+        </div>
+        <span class="piece-arrow">→</span>
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-label">Contact</span>
+      <hr class="section-rule" />
+    </div>
+
+    <div class="contact-inner">
+      <p class="contact-copy">
+        Queries or correspondence
+      </p>
+      <div class="contact-links">
+        <a class="contact-link" href="/cdn-cgi/l/email-protection#eb98838a8a85858a868285ab8c868a8287c5888486">
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-value"><span class="__cf_email__" data-cfemail="bccfd4ddddd2d2ddd1d5d2fcdbd1ddd5d092dfd3d1">[email&#160;protected]</span></span>
+        </a>
+
+        <!-- Add or remove links as needed -->
+        <!-- <a class="contact-link" href="https://substack.com/yoursubstack" target="_blank">
+          <span class="contact-link-label">Newsletter</span>
+          <span class="contact-link-value">Your Substack</span>
+        
