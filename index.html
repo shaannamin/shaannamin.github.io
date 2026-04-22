@@ -282,9 +282,25 @@
       border-top: 0.5px solid var(--rule);
       border-bottom: 0.5px solid var(--rule);
       display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .venues-row {
+      display: flex;
       align-items: baseline;
       gap: 1.5rem;
       flex-wrap: wrap;
+    }
+
+    .venues-row--stacked {
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .venues-inline--upright li,
+    .venues-inline--upright li::after {
+      font-style: normal !important;
     }
 
     .venues-inline {
@@ -510,17 +526,28 @@
   </div>
 
   <div class="divider-venues">
-    <span class="section-label">His work appears in</span>
-    <ul class="venues-inline">
-      <li>The Atlantic</li>
-      <li>The New Republic</li>
-      <li>The Caravan</li>
-      <li>The Georgia Review</li>
-      <li>The Rumpus</li>
-      <li>Washington Square Review</li>
-      <li>New Mandala</li>
-      <li>Partially Examined Life</li>
-    </ul>
+    <div class="venues-row">
+      <span class="section-label">His work appears in</span>
+      <ul class="venues-inline">
+        <li>The Atlantic</li>
+        <li>The New Republic</li>
+        <li>The Caravan</li>
+        <li>The Georgia Review</li>
+        <li>The Rumpus</li>
+        <li>Washington Square Review</li>
+        <li>New Mandala</li>
+        <li>Partially Examined Life</li>
+      </ul>
+    </div>
+    <div class="venues-row venues-row--stacked">
+      <span class="section-label">He has experience teaching and mentoring</span>
+      <ul class="venues-inline venues-inline--upright">
+        <li>Mathematics</li>
+        <li>Politics / Civics</li>
+        <li>Economics</li>
+        <li>History</li>
+      </ul>
+    </div>
   </div>
 
   <!-- ABOUT -->
@@ -532,16 +559,19 @@
 
     <div class="about-text">
         <p>
-          Shaan Amin is an Indian American essayist, journalist, and teacher from Syracuse and Elmira, New York. He received his MA and PhD in political science from the University of Wisconsin-Madison, where he received a National Science Foundation Graduate Research Fellowship for outstanding research and a Department Teaching Excellence Award for significant contributions in instruction. He served on the editorial board at <em>The Rumpus</em> from 2021-2025. Before this, he received his BA in Mathematics from Williams College.
-<!--- His writing is deeply informed by his Indian American heritage, his Rustbelt upbringing in central and southern New York, his time spent working in Indonesia, and his experiences managing chronic injuries.--->
+          Shaan Amin is an Indian American essayist and educator from Syracuse and Elmira, New York. He serves as an editor at <em>Inside Indonesia</em>, and previously served as an Assistant Features Editor at <em>The Rumpus</em>.
         </p>
 
         <p>
-He is currently working on two book projects. <em>The State of Prejudice</em>, based on his dissertation of the same name, records and analyzes how local governments and local NGOs provide and fail to provide services to Indonesia's most at-risk populations. <em>Homespun</em>, an in-progress creative nonfiction essay collection, unpacks the lived, historical, and mythical experience of injuries and violence blending the tools of historical research, personal anecdote, and myth.
+          He received his MA and PhD in political science from the University of Wisconsin-Madison, where he received a National Science Foundation Graduate Research Fellowship for outstanding research and a Department Teaching Excellence Award for significant contributions in instruction. Before this, he received his BA in Mathematics from Williams College.
         </p>
-        
- <p>
-In his spare time, he works at Bhakti Yoga DC, hosts a weekly open potluck, and is a dedicated member of the vibrant DC salsa and bachata scene.
+
+        <p>
+          He is currently working on two book projects. <em>The State of Prejudice</em>, based on his dissertation of the same name, records and analyzes how local governments and local NGOs provide and fail to provide services to Indonesia's most at-risk populations. <em>Homespun</em>, an in-progress creative nonfiction essay collection, unpacks the lived, historical, and mythical experience of injuries and violence blending the tools of historical research, personal anecdote, and myth.
+        </p>
+
+        <p>
+          In his spare time, he works at Bhakti Yoga DC, hosts a weekly open potluck, and is a dedicated member of the vibrant DC salsa and bachata scene.
         </p>
       </div>
   </section>
@@ -679,4 +709,3 @@ In his spare time, he works at Bhakti Yoga DC, hosts a weekly open potluck, and 
         <!-- <a class="contact-link" href="https://substack.com/yoursubstack" target="_blank">
           <span class="contact-link-label">Newsletter</span>
           <span class="contact-link-value">Your Substack</span>
-        
