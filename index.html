@@ -11,8 +11,7 @@
   <meta property="og:title" content="Shaan N. Amin — Writer" />
   <meta property="og:description" content="Writing about power and identity throughout Asia and its diasporas, from the alt-right's fascination with manga to Indonesian LGBTQ politics." />
   <meta property="og:url" content="https://shaannamin.github.io" />
-  <!-- Replace the og:image below with an absolute URL to a photo or header image once you have one -->
- <meta property="og:image" content="https://shaannamin.github.io/photo.jpg" />
+  <meta property="og:image" content="https://shaannamin.github.io/photo.jpg" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23F6F1E8'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='600' fill='%2376152B'>SA</text></svg>" />
@@ -99,9 +98,7 @@
       align-items: end;
     }
 
-    .hero-left {
-      align-self: stretch;
-    }
+    .hero-left { align-self: stretch; }
 
     .hero-photo {
       width: 100%;
@@ -163,18 +160,6 @@
       line-height: 1.8;
     }
 
-    /* ── DIVIDER ── */
-    .divider {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 4rem;
-    }
-
-    .divider hr {
-      border: none;
-      border-top: 0.5px solid var(--rule);
-    }
-
     /* ── SECTIONS ── */
     section {
       max-width: 1100px;
@@ -204,11 +189,8 @@
       border-top: 0.5px solid var(--rule);
     }
 
-    /* ── WRITING / PUBLICATIONS ── */
-    .writing-grid {
-      display: grid;
-      gap: 0;
-    }
+    /* ── WRITING ── */
+    .writing-grid { display: grid; gap: 0; }
 
     .piece {
       display: grid;
@@ -223,7 +205,6 @@
     }
 
     .piece:first-child { border-top: 0.5px solid var(--rule); }
-
     .piece:hover .piece-title { color: var(--wine); }
 
     .piece-meta {
@@ -298,11 +279,6 @@
       gap: 0.4rem;
     }
 
-    .venues-inline--upright li,
-    .venues-inline--upright li::after {
-      font-style: normal !important;
-    }
-
     .venues-inline {
       list-style: none;
       display: flex;
@@ -320,32 +296,13 @@
     .venues-inline li::after { content: '\00a0·\00a0'; color: var(--rule); }
     .venues-inline li:last-child::after { content: ''; }
 
+    .venues-inline--upright li,
+    .venues-inline--upright li::after {
+      font-style: normal !important;
+    }
+
     /* ── ABOUT ── */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 5rem;
-      align-items: start;
-    }
-
-    .about-photo-placeholder {
-      aspect-ratio: 3/4;
-      background: var(--rule);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      color: var(--ink-light);
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-    }
-
-    .about-photo-placeholder span { font-size: 2rem; opacity: 0.4; }
-
-    .about-text {
-      max-width: 680px;
-    }
+    .about-text { max-width: 680px; }
 
     .about-text p {
       font-size: 1rem;
@@ -355,38 +312,6 @@
     }
 
     .about-text p:last-child { margin-bottom: 0; }
-
-    .about-venues {
-      margin-top: 2.5rem;
-      padding-top: 2rem;
-      border-top: 0.5px solid var(--rule);
-    }
-
-    .about-venues p {
-      font-family: var(--body);
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      margin-bottom: 0.75rem !important;
-    }
-
-    .about-venues ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 1rem;
-    }
-
-    .about-venues ul li {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 1.05rem;
-      color: var(--ink-mid);
-    }
-
-    .about-venues ul li::after { content: ' ·'; color: var(--rule); }
-    .about-venues ul li:last-child::after { content: ''; }
 
     /* ── CONTACT ── */
     .contact-inner {
@@ -430,7 +355,6 @@
       font-family: var(--serif);
       font-size: 1.25rem;
       color: var(--ink);
-      transition: color 0.2s;
       border-bottom: 0.5px solid transparent;
       transition: border-color 0.2s, color 0.2s;
     }
@@ -459,7 +383,7 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
-      nav { padding: 1.5rem 1.5rem; }
+      nav { padding: 1.5rem; }
       .nav-links { gap: 1.5rem; }
       .nav-links a { font-size: 0.7rem; }
 
@@ -471,15 +395,7 @@
 
       section { padding: 3.5rem 1.5rem; }
 
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-
-      .about-photo-placeholder {
-        aspect-ratio: 4/3;
-        max-width: 280px;
-      }
+      .divider-venues { padding: 1.5rem; }
 
       .contact-inner {
         grid-template-columns: 1fr;
@@ -492,8 +408,6 @@
         text-align: center;
         padding: 2rem 1.5rem;
       }
-
-      .divider { padding: 0 1.5rem; }
     }
   </style>
 </head>
@@ -509,12 +423,10 @@
     </ul>
   </nav>
 
-
   <!-- HERO -->
   <div class="hero">
     <div class="hero-left">
-      <!-- Replace with: <img class="hero-photo" src="photo.jpg" alt="Shaan N. Amin" /> -->
-<img class="hero-photo" src="photo.jpg" alt="Shaan N. Amin" />
+      <img class="hero-photo" src="photo.jpg" alt="Shaan N. Amin" />
     </div>
     <div class="hero-right">
       <h1 class="hero-name-small">Shaan N. Amin &nbsp;·&nbsp; Essays &amp; Journalism</h1>
@@ -525,6 +437,7 @@
     </div>
   </div>
 
+  <!-- VENUES BAR -->
   <div class="divider-venues">
     <div class="venues-row">
       <span class="section-label">His work appears in</span>
@@ -556,26 +469,21 @@
       <span class="section-label">About</span>
       <hr class="section-rule" />
     </div>
-
     <div class="about-text">
-        <p>
-          Shaan Amin is an Indian American essayist and educator from Syracuse and Elmira, New York. He serves as an editor at <em>Inside Indonesia</em>, and previously served as an Assistant Features Editor at <em>The Rumpus</em>.
-        </p>
-
-        <p>
-          He received his MA and PhD in political science from the University of Wisconsin-Madison, where he received a National Science Foundation Graduate Research Fellowship for outstanding research and a Department Teaching Excellence Award for significant contributions in instruction. Before this, he received his BA in Mathematics from Williams College.
-        </p>
-
-        <p>
-          He is currently working on two book projects. <em>The State of Prejudice</em>, based on his dissertation of the same name, records and analyzes how local governments and local NGOs provide and fail to provide services to Indonesia's most at-risk populations. <em>Homespun</em>, an in-progress creative nonfiction essay collection, unpacks the lived, historical, and mythical experience of injuries and violence blending the tools of historical research, personal anecdote, and myth.
-        </p>
-
-        <p>
-          In his spare time, he works at Bhakti Yoga DC, hosts a weekly open potluck, and is a dedicated member of the vibrant DC salsa and bachata scene.
-        </p>
-      </div>
+      <p>
+        Shaan Amin is an Indian American essayist and history teacher from Syracuse and Elmira, New York. He serves as an editor at <em>Inside Indonesia</em>, and previously served as an Assistant Features Editor at <em>The Rumpus</em> (2021–2025).
+      </p>
+      <p>
+        He received his MA and PhD in political science from the University of Wisconsin-Madison, where he received a National Science Foundation Graduate Research Fellowship for outstanding research and a Department Teaching Excellence Award for significant contributions in instruction. Before this, he received his BA in Mathematics from Williams College.
+      </p>
+      <p>
+        He is currently working on two book projects. <em>The State of Prejudice</em>, based on his dissertation of the same name, records and analyzes how local governments and local NGOs provide and fail to provide services to Indonesia's most at-risk populations. <em>Homespun</em>, an in-progress creative nonfiction essay collection, unpacks the lived, historical, and mythical experience of injuries and violence blending the tools of historical research, personal anecdote, and myth. His essay "Silicon Bali" was a finalist for the Iowa Review Nonfiction Award. 
+      </p>
+      <p>
+        He currently lives in Washington, DC.
+      </p>
+    </div>
   </section>
-
 
   <!-- WRITING -->
   <section id="writing">
@@ -583,10 +491,9 @@
       <span class="section-label">Selected Writing</span>
       <hr class="section-rule" />
     </div>
-
     <div class="writing-grid">
 
-        <div class="piece">
+      <div class="piece">
         <div class="piece-meta">
           <span class="piece-publication">Black Warrior Review</span>
           <span class="piece-title">Beauty is a Type of Work</span>
@@ -595,12 +502,14 @@
         </div>
       </div>
 
+      <div class="piece">
         <div class="piece-meta">
           <span class="piece-publication">The Georgia Review</span>
           <span class="piece-title">Shaven</span>
           <span class="piece-teaser">"I resurrect old myths when drawing lines between stars, loose strands of coarse hair clinging to a damp sink."</span>
           <span class="piece-type">Creative Nonfiction &nbsp;·&nbsp; Forthcoming September 2026</span>
         </div>
+      </div>
 
       <a class="piece" href="https://www.newmandala.org/lgbt-organisations-navigate-indonesias-two-homophobias/" target="_blank" rel="noopener">
         <div class="piece-meta">
@@ -636,7 +545,7 @@
         <div class="piece-meta">
           <span class="piece-publication">The New Republic</span>
           <span class="piece-title">Why Attack on Titan Is the Alt-Right's Favorite Manga</span>
-          <span class="piece-teaser">"Isayama’s silence just makes it easier for audiences to transpose their own ideologies onto the world he has created."</span>
+          <span class="piece-teaser">"Isayama's silence just makes it easier for audiences to transpose their own ideologies onto the world he has created."</span>
           <span class="piece-type">Media Criticism &nbsp;·&nbsp; November 2020</span>
         </div>
         <span class="piece-arrow">→</span>
@@ -656,7 +565,7 @@
         <div class="piece-meta">
           <span class="piece-publication">The Caravan</span>
           <span class="piece-title">Race to the Top</span>
-          <span class="piece-teaser">"As Republicans try to embrace minorities at arms’ length, Haley is the ideal evangelist of conservative gospel."</span>
+          <span class="piece-teaser">"As Republicans try to embrace minorities at arms' length, Haley is the ideal evangelist of conservative gospel."</span>
           <span class="piece-type">Cover Story &nbsp;·&nbsp; July 2018</span>
         </div>
         <span class="piece-arrow">→</span>
@@ -676,7 +585,7 @@
         <div class="piece-meta">
           <span class="piece-publication">The Atlantic</span>
           <span class="piece-title">Making Fun of How South Asians Talk: A History</span>
-          <span class="piece-teaser">"Despite South Asian America’s budding pop-cultural renaissance, patanking’s legacy lingers."</span>
+          <span class="piece-teaser">"Despite South Asian America's budding pop-cultural renaissance, patanking's legacy lingers."</span>
           <span class="piece-type">Analysis &nbsp;·&nbsp; February 2018</span>
         </div>
         <span class="piece-arrow">→</span>
@@ -686,7 +595,7 @@
         <div class="piece-meta">
           <span class="piece-publication">The Atlantic</span>
           <span class="piece-title">The Dark Side of the Comics That Redefined Hinduism</span>
-          <span class="piece-teaser">"I struggle to reconcile ACK’s recurrent bigoted portrayals with my enduring affection for the characters whose selflessness and courage left me in awe as a child."</span>
+          <span class="piece-teaser">"I struggle to reconcile ACK's recurrent bigoted portrayals with my enduring affection for the characters whose selflessness and courage left me in awe as a child."</span>
           <span class="piece-type">Media Criticism &nbsp;·&nbsp; December 2017</span>
         </div>
         <span class="piece-arrow">→</span>
@@ -695,24 +604,27 @@
     </div>
   </section>
 
-
   <!-- CONTACT -->
   <section id="contact">
     <div class="section-header">
       <span class="section-label">Contact</span>
       <hr class="section-rule" />
     </div>
-
     <div class="contact-inner">
-      <p class="contact-copy">
-        Queries or correspondence
-      </p>
-<a class="contact-link" href="mailto:shaannamin@gmail.com">
+      <p class="contact-copy">Queries or correspondence</p>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:shaannamin@gmail.com">
           <span class="contact-link-label">Email</span>
           <span class="contact-link-value">shaannamin@gmail.com</span>
         </a>
+      </div>
+    </div>
+  </section>
 
-        <!-- Add or remove links as needed -->
-        <!-- <a class="contact-link" href="https://substack.com/yoursubstack" target="_blank">
-          <span class="contact-link-label">Newsletter</span>
-          <span class="contact-link-value">Your Substack</span>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Shaan N. Amin</p>
+  </footer>
+
+</body>
+</html>
